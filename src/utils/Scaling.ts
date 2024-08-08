@@ -44,4 +44,7 @@ const scaleHeight = (size: number) => (SCREEN_HEIGHT / BASE_HEIGHT) * size;
 // Function to scale font size based on pixel density
 const scaleFont = (size: number) => size * PixelRatio.getFontScale();
 
-export {scaleWidth, scaleHeight, scaleFont};
+const moderateScale = (size: number, factor = 0.5) =>
+  size + (scaleWidth(size) - size) * factor;
+
+export {scaleWidth, scaleHeight, moderateScale, scaleFont};

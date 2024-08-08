@@ -1,18 +1,12 @@
-import {StyleSheet, TextInput, View} from 'react-native';
-import React, {useState} from 'react';
+import {StyleSheet, Text} from 'react-native';
+import React from 'react';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
-const Home = () => {
-  const [input, setInput] = useState('');
-
+const Home: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <View>
-        <View>
-          <TextInput value={input} onChangeText={setInput} />
-          <View style={{backgroundColor: 'blue'}} />
-        </View>
-      </View>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text>Home</Text>
+    </SafeAreaView>
   );
 };
 
